@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :set_raven_context
+  before_action :temporary_deactivation
 
   def after_sign_in_path_for(resource)
     if resource.is_a?(User)
@@ -29,5 +30,11 @@ class ApplicationController < ActionController::Base
 
     Raven.user_context(id: user_identifier_id, user: user_identifier)
     Raven.extra_context(params: params.to_unsafe_h, url: request.url)
+  end
+
+  def temporary_deactivation
+    return unless current_patient.present?
+
+    sign_out_and_redirect current_patient
   end
 end

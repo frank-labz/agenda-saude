@@ -4,37 +4,15 @@
   </div>
 </div>
 
-<div class="alert alert-info alert-dismissable mb-5 mt-5" role="alert">
-  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-  <h6 class="mb-0" style="text-align: center;">
-    Os <strong>Testes Rápidos</strong> que estão sendo disponibilizados pela Secretaria da Saúde são para <strong>pessoas assintomáticas</strong> e de adesão voluntária. <strong>Somente serão agendados ou cancelados através desse canal</strong>.<br/><br/>
-
-    Reiteramos que os <strong>Testes Rápidos não são indicados para pessoas sintomáticas</strong>, por isso, caso esteja com sintomas, <strong>procure uma Unidade de Saúde</strong> para uma avaliação presencial.<br/><br/>
-
-    Caso <strong>você ou alguém de sua residência esteja cumprindo período de isolamento</strong> após confirmação de diagnóstico de Covid-19, <strong>cancele seu exame</strong> caso tenha agendado e <strong>aguarde 10 dias para agendá-lo novamente</strong>.<br/><br/>
-
-    Um <strong>resultado positivo</strong> (IgG ou IgM), indica apenas contato anterior com o vírus, <strong>não sendo garantia de imunidade</strong>, logo o <strong>uso de máscara</strong>, a <strong>higiene das mãos</strong> e as medidas de <strong>distanciamento social</strong> precisam ser mantidas, <strong>independente do resultado</strong>.<br/>
-  </h6>
-</div>
-
-<p class="mt-5">Faça seu agendamento abaixo e dirija-se até a unidade escolhida com um documento de identificação em mãos.</p>
-
-
-<div class="row text-center">
-  <div class="col">
-    <%= form_for(:patient, url: patient_base_login_path) do |f| %>
-      <div class="form-group">
-        <%= f.text_field :cpf, autofocus: true, autocomplete: "cpf", minlength: 11, maxlength: 11, required: true, class: "form-control", 'aria-describedby' => 'cpfHelpInLine', placeholder: 'CPF' %>
-        <small id="cpfHelpInLine" class="text-muted">
-          Cadastre seu CPF para fazer o agendamento do seu teste rápido para COVID-19
-        </small>
-      </div>
-
-      <div class="actions">
-        <%= f.submit "Entrar", class: "btn btn-primary btn-block" %>
-      </div>
-    <% end %>
-  </div>
+<div class="alert alert-danger mb-5 mt-5" role="alert">
+  <h1 class="mb-0" style="text-align: center;">
+    AGENDAMENTO INDISPONÍVEL
+  </h1>
+  <h4 class="mt-3" style="text-align: center;">
+    Prezado usuário, neste momento o agendamento de testes rápidos para pacientes sem sintomas gripais está indisponível.
+    Os testes continuarão a ser realizados por demanda espontânea nas Unidades Básicas de Saúde.
+    Neste momento apenas os pacientes <strong>com sintomas gripais</strong> serão atendidos no Centro de Tratamento Precoce da Tupy.
+  </h4>
 </div>
 
 <div class="row text-center mt-5 mb-5">
