@@ -57,9 +57,4 @@ Rails.application.configure do
 
   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true
-
-  ENV['SECOND_DOSE_INTERVAL'] ||= '4'
-  ENV['LATE_PATIENT_TOLERANCE_MINUTES'] ||= '10'
-  ENV['EARLY_PATIENT_WARNING_MINUTES'] ||= '30'
-  ENV['SLOTS_WINDOW_IN_DAYS'] ||= '7'
 end
