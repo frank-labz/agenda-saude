@@ -34,12 +34,9 @@ module TemplateRails
     config.x.time_zone = "Brasilia"
     config.x.slack_webhook_url = ENV.fetch("SLACK_WEBHOOK_URL", "")
     config.x.backtrace = ENV.fetch("BACKTRACE", "")
-    config.x.second_dose_interval = ENV.fetch("SECOND_DOSE_INTERVAL", "4")
     config.x.late_patient_tolerance_minutes = ENV.fetch("LATE_PATIENT_TOLERANCE_MINUTES", "10")
     config.x.eaerly_patient_warning_minutes = ENV.fetch("EARLY_PATIENT_WARNING_MINUTES", "30")
     config.x.slots_window_in_days = ENV.fetch("SLOTS_WINDOW_IN_DAYS", "7")
-    config.x.timeslotgen_execution_hour = ENV.fetch("TIMESLOTGEN_EXECUTION_HOUR", "22") # Hour of the day the time slot generation worker will run
-    config.x.max_appointment_days_ahead = ENV.fetch("MAX_APPOINTMENT_DAYS_AHEAD", "3") # Max number of days the user can see ahead when listing time slots
     config.x.sentry_dsn = ENV.fetch('SENTRY_DSN', '')
 
     # https://guides.rubyonrails.org/autoloading_and_reloading_constants.html#autoload-paths
